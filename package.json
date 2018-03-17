@@ -1,0 +1,22 @@
+{
+  "name": "lambda-adxengine-mockup",
+  "version": "0.1.0",
+  "description": "Lambda app providing a mockup VAST ad response",
+  "main": "index.js",
+  "scripts": {
+    "test": "$(npm bin)/lambda-local -l index.js -e event-sample.json",
+    "prebuild": "npm run clean",
+    "build": "./build.sh",
+    "clean": "rm -r dist",
+    "predeploy": "npm run build",
+    "deploy": "./deploy.sh"
+  },
+  "author": "Jonas Rydholm Birmé <jonas.birme@eyevinn.se>",
+  "license": "MIT",
+  "devDependencies": {
+    "lambda-local": "^1.4.6"
+  },
+  "dependencies": {
+    "eyevinn-adxchange-engine": "^0.1.1"
+  }
+}
