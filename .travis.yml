@@ -1,0 +1,13 @@
+dist: trusty
+language: node_js
+cache: false
+env:
+  - NODE_MODULES_CACHE=false
+node_js:
+ - "6"
+
+after_success:
+ - pip install --user awscli
+ - export PATH=$PATH:$HOME/.local/bin
+ - if [ "$TRAVIS_BRANCH" == "master" ]; then npm run deploy ; fi
+ 
