@@ -17,6 +17,6 @@
     "lambda-local": "^1.4.6"
   },
   "dependencies": {
-    "eyevinn-adxchange-engine": "^0.1.1"
+    "eyevinn-adxchange-engine": "^0.1.2"
   }
 }
